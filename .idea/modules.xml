@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign-api/feign-api.iml" filepath="$PROJECT_DIR$/feign-api/feign-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapper-dao/mapper-dao.iml" filepath="$PROJECT_DIR$/mapper-dao/mapper-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-center/order-center.iml" filepath="$PROJECT_DIR$/order-center/order-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-center/product-center.iml" filepath="$PROJECT_DIR$/product-center/product-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sentinel-pro.iml" filepath="$PROJECT_DIR$/sentinel-pro.iml" />
+    </modules>
+  </component>
+</project>
