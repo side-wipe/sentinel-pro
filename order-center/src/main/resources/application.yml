@@ -23,22 +23,53 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.137.21:8847
+        server-addr: 192.168.137.21:8847   #nacos配置中心地址
     sentinel:
       transport:
         port: 8719
-        dashboard: 192.168.137.21:8888
+        dashboard: 192.168.137.21:8888   #sentinel-dashboard地址
         #namespace: bc7613d2-2e22-4292-a748-48b78170f14c  #指定namespace的id
+      datasource:
+        # 名称随意
+        flow:
+          nacos:
+            server-addr: 192.168.137.21:8847      #nacos配置中心地址
+            dataId: ${spring.application.name}-flow-rules   #文件名
+            groupId: SENTINEL_GROUP
+            rule-type: flow
+        degrade:
+          nacos:
+            server-addr: 192.168.137.21:8847
+            dataId: ${spring.application.name}-degrade-rules
+            groupId: SENTINEL_GROUP
+            rule-type: degrade
+        system:
+          nacos:
+            server-addr: 192.168.137.21:8847
+            dataId: ${spring.application.name}-system-rules
+            groupId: SENTINEL_GROUP
+            rule-type: system
+        authority:
+          nacos:
+            server-addr: 192.168.137.21:8847
+            dataId: ${spring.application.name}-authority-rules
+            groupId: SENTINEL_GROUP
+            rule-type: authority
+        param-flow:
+          nacos:
+            server-addr: 192.168.137.21:8847
+            dataId: ${spring.application.name}-param-flow-rules
+            groupId: SENTINEL_GROUP
+            rule-type: param-flow
   application:
     name: order-center
   main:
     allow-bean-definition-overriding: true
 
-#指定FeignClientApi的日志级别
-
 server:
   port: 8082
 
+#指定FeignClientApi的日志级别
 logging:
   level:
     com:
@@ -48,7 +79,7 @@ feign:
   client:
     config:
       product-center:
-        loggerLevel: full
+        loggerLevel: NONE
   httpclient:
     enabled: true
     max-connections: 200

@@ -53,6 +53,11 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+
         <!--加入sentinel-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

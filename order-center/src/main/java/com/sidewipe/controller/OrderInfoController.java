@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 /**
+ *
  * //feign+sentinel基础用法
  */
 @RestController

@@ -33,4 +33,4 @@ logging:
   level:
     com:
       tuling:
-        mapper: debug
+        mapper: NONE
